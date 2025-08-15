@@ -1,0 +1,11 @@
+composer create-project laravel/laravel banconosql
+composer require jenssegers/mongodb
+composer require mongodb/laravel-mongodb
+composer require mongodb/laravel-mongodb:^4.2 (Compatível com o lararvel 10)
+
+
+mongod
+php artisan --version
+php -v
+php --ini
+php -m | findstr mongodb
