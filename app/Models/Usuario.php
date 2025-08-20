@@ -11,19 +11,15 @@ class Usuario extends Model
 {
     protected $connection = 'mongodb';
     protected $collection = 'usuarios';
-    protected $primaryKey = '_id';
-    protected $casts = [
-        '_id' => 'objectid',
-    ];
+    protected $primaryKey = '_id';   
 
-    //ID STRING
-    // protected $keyType = 'string';
-    // Se quiser ObjectId mesmo:
-    // public $incrementing = false;
+    //ID_STRING
+    protected $keyType = 'string';  
+    public $incrementing = false;
 
     //ID_INCRERMENT
-    public $incrementing = true;
-    protected $keyType = 'int';
+    // public $incrementing = true;
+    // protected $keyType = 'int';
 
     protected $fillable = [
         'nome',

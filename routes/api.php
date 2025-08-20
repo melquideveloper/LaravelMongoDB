@@ -2,6 +2,8 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UsuarioController;
+use App\Http\Controllers\PedidoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +19,8 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::put('/usuarios/{id}', [UsuarioController::class, 'atualizar']);
+Route::delete('/usuarios/{id}', [UsuarioController::class, 'deleteUsuario']);
+Route::post('/pedidos', [PedidoController::class, 'criar']);
+Route::get('/pedidos-com-usuario', [PedidoController::class, 'listarComUsuario']);
