@@ -2,6 +2,7 @@ composer create-project laravel/laravel banconosql
 composer require jenssegers/mongodb
 composer require mongodb/laravel-mongodb
 composer require mongodb/laravel-mongodb:^4.2 (Compatível com o lararvel 10)
+composer require predis/predis (Instalar o client Redis no Laravel)
 
 
 mongod
@@ -9,3 +10,19 @@ php artisan --version
 php -v
 php --ini
 php -m | findstr mongodb
+
+
+
+🧠 Pronto para evoluir
+
+Com isso funcionando, agora podemos usar o Redis para:
+
+🔁 Cache de dados de usuários ou pedidos
+
+⏳ Filas (Jobs)
+
+💡 Contadores
+
+🛒 Sessões otimizadas
+
+📡 Pub/Sub para notificações em tempo real
