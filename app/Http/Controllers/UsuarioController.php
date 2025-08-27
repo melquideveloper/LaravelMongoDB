@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use MongoDB\Operation\FindOneAndUpdate;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Str;
 
 class UsuarioController extends Controller
 {
@@ -24,11 +25,12 @@ class UsuarioController extends Controller
     public function criarUsuario()
     {
         $usuario = Usuario::create([
+            'usuario_uid' => (string) Str::uuid(),
             'nome' => 'João da Silva',
             'email' => 'joao@example.com',
             'idade' => 30
         ]);
-
+    
         return response()->json($usuario);
     }
 

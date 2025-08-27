@@ -18,7 +18,7 @@ class Pedido extends Model
     public $incrementing = false;
 
     protected $fillable = [
-        'usuario_id',  // ID do usuário dono do pedido
+        'usuario_uid',  // ID do usuário dono do pedido
         'descricao',
         'valor',
         'data_pedido',

@@ -21,11 +21,7 @@ class Usuario extends Model
     // public $incrementing = true;
     // protected $keyType = 'int';
 
-    protected $fillable = [
-        'nome',
-        'email',
-        'idade',
-    ];
+    protected $fillable = ['usuario_uid', 'nome', 'email', 'idade'];
 
    
 }

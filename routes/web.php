@@ -22,6 +22,5 @@ Route::get('/', function () {
 });
 
 Route::get('/usuarios', [UsuarioController::class, 'index']);
-Route::get('/usuarios/criar', [UsuarioController::class, 'criarUsuario']);
 Route::get('/usuarios/buscar', [UsuarioController::class, 'buscar']);
 Route::put('/usuarios/{id}', [UsuarioController::class, 'atualizar']);
